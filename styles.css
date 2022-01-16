@@ -1,0 +1,11 @@
+#grid-container {
+    width: 960px;
+    height: 960px;
+    display: grid;
+}
+
+.grid-divs {
+    margin: 0;
+    padding: 0;
+
+}
