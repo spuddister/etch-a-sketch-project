@@ -1,11 +1,36 @@
-#grid-container {
-    width: 960px;
-    height: 960px;
-    display: grid;
+
+body {
+    margin: 0;
 }
 
-.grid-divs {
+#main-container {
+    display: flex;
     margin: 0;
     padding: 0;
+    align-items: center;
+    justify-content: center;
+    border: black solid 1px;
+}
 
+#grid-container {
+    margin: 0;
+    padding: 0;
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    border: red solid 1px;
+    box-sizing: border-box;
+}
+
+.grid-square {
+    margin: 0;
+    padding: 0;
+    border: purple solid 1px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.grid-square:hover {
+    background-color: black;
 }
