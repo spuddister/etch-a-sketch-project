@@ -26,11 +26,11 @@ body {
 .grid-square {
     margin: 0;
     padding: 0;
-    border: purple solid 1px;
+    border: lightgrey solid 1px;
     flex: 1;
     box-sizing: border-box;
 }
 
-.grid-square:hover {
+/* .grid-square:hover {
     background-color: black;
-}
+} */
