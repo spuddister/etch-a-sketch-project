@@ -6,17 +6,21 @@ let gridSize = 8;
 for (i = 0; i < gridSize*gridSize; i++) addSquare();
 let gridElements = Array.from(document.getElementsByClassName('grid-square'));
 
+
+
+//Adding event listeners to all grid squares for changing background color
+gridElements.forEach(element => {
+    element.addEventListener('mouseover', painter);
+});
+
+//----------------------------------------------------------------------------------------------------
+
 function addSquare() {
     let gridSquare = document.createElement('div');
     gridSquare.classList.add('grid-square');
     gridSquare.style.flexBasis = 100/gridSize + '%';
     gridContainer.appendChild(gridSquare);
 }
-
-//Adding event listeners to all grid squares for changing background color
-gridElements.forEach(element => {
-    element.addEventListener('mouseover', painter);
-});
 
 //Painter function alters the background colour of the grid squares depending on which modes are selected
 function painter(e) {
@@ -27,6 +31,18 @@ function painter(e) {
     } else {
         e.target.style.backgroundColor = 'black';
     }
+}
+
+//This function redraws the grid using the addSquare function when the size is changed by the user
+function gridRedraw(){
+    gridElements.forEach(element => {
+        element.remove();
+    })
+    for (i = 0; i < gridSize*gridSize; i++) addSquare();
+    gridElements = Array.from(document.getElementsByClassName('grid-square'));
+    gridElements.forEach(element => {
+        element.addEventListener('mouseover', painter);
+    });
 }
 
 
@@ -54,7 +70,11 @@ const eraserBtn = document.getElementById('eraser').addEventListener('click', fu
     }
 });
 
-const gridSizeSlider = document.getElementById('grid-size-slider').addEventListener('input', function(){
+const gridSizeSlider = document.getElementById('grid-size-slider');
+gridSizeSlider.addEventListener('input', function(){
+    document.getElementById('grid-size-value').textContent = this.value;
+})
+gridSizeSlider.addEventListener('mouseup', function(e){
     gridSize = this.value;
-    document.getElementById('grid-size-value').textContent = gridSize;
+    gridRedraw();
 })
