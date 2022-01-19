@@ -1,38 +1,132 @@
 
-body {
-    margin: 0;
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
 }
 
-#main-container {
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#content-card {
     display: flex;
     margin: 0;
     padding: 0;
+    gap: 15px;
     align-items: center;
     justify-content: center;
-    border: black solid 1px;
+}
+
+.card {
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #42414d;
+    border-radius: 20px;
 }
 
 #grid-container {
     margin: 0;
     padding: 0;
-    width: 960px;
-    height: 960px;
+    width: 700px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
-    border: red solid 1px;
+    border: black solid 1px;
     box-sizing: border-box;
+    flex-shrink: 0;
+    
 }
 
 .grid-square {
     margin: 0;
     padding: 0;
     border: lightgrey solid 1px;
-    flex: 1;
     box-sizing: border-box;
 }
 
-.pressed {
-    background-color: #b3b3b3;
-    border-color: black;
+button:active, .pressed {
+    background-color: #83b6ec;
     border-radius: 4px;
+
+}
+
+button {
+    padding: 25px 0px;
+}
+
+
+
+#colour-wheel {
+    width: 100%;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    margin-top: auto;
+}
+
+.user-interface {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 700px;
+}
+
+.UI-header {
+    background-color: #398ee7;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fbfbfe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -15px -15px 20px -15px;
+    padding: 15px 20px 20px 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.colour-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#colour-mode {
+    flex: 1;
+}
+
+.colours {
+    color: #42414d;
+    color: #fbfbfe;
+    color: #909098;
+    color: #a6a5ad;
+    color: #7a7a82;
+    color: #398ee7;
 }

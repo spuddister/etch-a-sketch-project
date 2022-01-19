@@ -4,7 +4,7 @@ let rainbow = false;
 let eraser = false;
 let shader = false;
 let colour = false;
-let colourHex;
+let colourHex = document.getElementById('colour-wheel').value;
 let gridSize = 8;
 gridDraw();
 
