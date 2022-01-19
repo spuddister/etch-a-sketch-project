@@ -31,6 +31,8 @@ body {
     box-sizing: border-box;
 }
 
-/* .grid-square:hover {
-    background-color: black;
-} */
+.pressed {
+    background-color: #b3b3b3;
+    border-color: black;
+    border-radius: 4px;
+}
