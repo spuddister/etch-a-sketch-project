@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>spuddister</header>
+    <header><a class="link" href="https://github.com/spuddister" target="_blank">spuddister <i class='fa fa-github'></i></a></header>
     <div class="container">
         <div id="content-card">
             <div class="card">  
@@ -28,8 +29,8 @@
                     <button id="shader-mode">Shading Mode</button>
                     <button id="eraser">Eraser</button>
                     <div class="slide-container">
+                        <div id="grid-size-value">Grid size: 8 x 8</div>
                         <input type="range" min="8" max="64" value="8" class="slider" id="grid-size-slider">
-                        <div id="grid-size-value">8 x 8</div>
                     </div>
                 </div>
             </div> 
@@ -40,6 +41,11 @@
             </div>  
         </div>
     </div>
-    <footer class="main-footer">Copyright</footer>
+    <footer class="main-footer">
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+    </footer>
 </body>
 </html>

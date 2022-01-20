@@ -20,7 +20,7 @@ const eraserBtn = document.getElementById('eraser').addEventListener('click', er
 const gridSizeSlider = document.getElementById('grid-size-slider');
 
 gridSizeSlider.addEventListener('input', function(){
-    document.getElementById('grid-size-value').textContent = this.value + ' x ' + this.value;
+    document.getElementById('grid-size-value').textContent = 'Grid size: ' + this.value + ' x ' + this.value;
 })
 
 gridSizeSlider.addEventListener('mouseup', function(e){

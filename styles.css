@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Staatliches&family=Work+Sans&display=swap');
 
 header {
     display: flex;
     justify-content: flex-end;
     background-color: black;
-    padding: 20px;
-    color: white;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 14px;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -64,17 +64,25 @@ body {
 button:active, .pressed {
     background-color: #83b6ec;
     border-radius: 4px;
-
 }
 
 button {
-    padding: 25px 0px;
+    padding: 10px 0px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
 }
 
-
+#clear {
+    background-color: #ff3333;
+    border-radius: 4px;
+}
+#clear:active {
+    background-color: #b32020;
+}
 
 #colour-wheel {
     width: 100%;
+    margin-top: 2px;
 }
 
 .main-footer {
@@ -95,6 +103,7 @@ button {
 }
 
 .UI-header {
+    
     background-color: #398ee7;
     font-size: 36px;
     font-weight: bold;
@@ -103,14 +112,23 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -15px -15px 20px -15px;
+    margin: 0;
     padding: 15px 20px 20px 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 10px;
 }
 
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.1s;
+    margin-right: 30px;
+}
+a:hover {
+    transform: scale(1.2);
 }
 
 .colour-container {
@@ -122,11 +140,9 @@ p {
     flex: 1;
 }
 
-.colours {
-    color: #42414d;
-    color: #fbfbfe;
-    color: #909098;
-    color: #a6a5ad;
-    color: #7a7a82;
-    color: #398ee7;
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
