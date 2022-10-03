@@ -1,5 +1,5 @@
 # Etch-a-Sketch Project
-A javascipt heavy project from The Odin Project, this is a fun tool similar to an etch-a-sketch.
+A javascipt focussed project from The Odin Project, this is a fun program similar to an etch-a-sketch.
 
 ### New Skills 
 - DOM Manipulation
